@@ -3,6 +3,7 @@ import React, {Component} from 'react'
 import {Container, ContainerGrid, Box} from '../style/page'
 import {Logo, Menu, MenuMobile} from '../style/header'
 import {colors, sizes} from '../style/design'
+import Icon from './icon'
 
 export default class Header extends Component{
     state = {
@@ -13,10 +14,16 @@ export default class Header extends Component{
     }
     render(){
         return(
-            <header>
+            <header style = {headerStyle}>
                 {this.state.menu? 
                     <MenuMobile>
-                        <a className = 'close' onClick = {this.toggleMenu}/>
+                        <ul>
+                            <li>icon1</li>
+                            <li>icon2</li>
+                            <li>icon3</li>
+                            <li>icon4</li>
+                            <li>icon5</li>
+                        </ul>
                     </MenuMobile>: 
                 
                 ''}
@@ -42,4 +49,9 @@ export default class Header extends Component{
             </header>
         )
     }
+}
+
+const headerStyle = {
+    position: 'fixed',
+    width: '100%',
 }

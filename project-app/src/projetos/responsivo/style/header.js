@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import {sizes} from './design'
+import {sizes, colors} from './design'
+
 
 export const Logo = styled.img`
         width: 64px;
@@ -16,8 +17,9 @@ export const Menu = styled.nav`
             cursor: pointer;
         }
         ul{
-            display: none
+            display: none;
         }
+
     }
     @media screen and (min-width: ${sizes.tablet}){
         a{
@@ -38,11 +40,15 @@ export const Menu = styled.nav`
 export const MenuMobile = styled.div`
     @media screen and (max-width: ${sizes.tablet}){
         position: absolute;
-        width: 60%;
-        height: 400px;
+        width: 100%;
+        height: 100px;
         top: 100px;
         right: 0px;
-        background-color: gray;
-        opacity: 0.7;
+        background-color: ${colors.type1};
+        ul{
+            li{
+                display: inline;
+            }
+        }
     }
 `

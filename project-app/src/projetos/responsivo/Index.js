@@ -7,9 +7,11 @@ import './index.css'
 export default class Index extends Component{
     render(){
         return(
-            <Container bgColor = {colors.type3} height = '2000'>
+            <div>
                 <Header/>
-            </Container>
+                <Container bgColor = {colors.type3} height = '2000'>
+                </Container>
+            </div>
         )
     }
 }

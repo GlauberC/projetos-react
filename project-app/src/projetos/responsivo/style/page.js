@@ -5,23 +5,20 @@ export const Container = styled.div`
     @media screen and (min-width: ${sizes.mobileS}){
         width: 100%;
     };
-    @media screen and (min-width: ${sizes.laptop}){
-        width: ${sizes.laptop};
-    };
     background-color: ${props => props.bgColor};
     height: ${props => props.height + 'px'};
     margin: 0 auto;
 `
 
 export const ContainerGrid = styled(Container)`
+    @media screen and (min-width: ${sizes.laptop}){
+        width: ${sizes.laptop};
+    }
     display: flex;
     flex-direction: 'row';
     justify-content: space-between;
     @media screen and (min-width: ${sizes.mobileS}){
-        padding: 0 5vw;
-    }
-    @media screen and (min-width: ${sizes.laptop}){
-        padding: 0 51px;
+        padding: 0 20px;
     }
 `
 
