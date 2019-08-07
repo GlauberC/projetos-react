@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Container, Botao } from './page';
+import { Container, Botao, breakP } from './page';
 
 export const Introducao = styled.section`
     background: url(${require('../assets/img/bg-intro.jpg')}) no-repeat center center;
@@ -25,6 +25,11 @@ export const Introducao = styled.section`
     p{
         font-style: italic;
         font-size: 1.125em;
+    }
+
+    @media only screen and (max-width: ${breakP.tablet}px) {
+        padding: 60px 0;
+        /*Também poderia Reduzir o tamanho da imagem */
     }
     
 `
@@ -68,6 +73,14 @@ export const Locais = styled.section`
     max-width: 960px;
     margin: 0 auto;
     padding: 60px 0;
+
+    @media only screen and (max-width: ${breakP.pc}px) and (min-width: ${breakP.tablet+1}px){
+        max-width: ${breakP.tablet-19}px;
+    }
+    @media only screen and (max-width: ${breakP.tablet}px){
+        max-width: ${breakP.mobile-19}px;
+    }
+
 `
 
 export const Assine = styled.section`

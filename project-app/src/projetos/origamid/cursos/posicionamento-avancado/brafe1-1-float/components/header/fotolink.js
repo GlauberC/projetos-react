@@ -11,4 +11,5 @@ const Link = styled.a`
     display: block;
     float: left;
     margin-left: 10px;
+
 `

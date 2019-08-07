@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {breakP} from '../../styles/page'
 
 export default props => (
     <FotoBlock>
@@ -28,5 +29,14 @@ const FotoBlock = styled.div`
         padding: 5px 0 10px 0;
         top: -25px;
         position: relative;
+    }
+
+    @media only screen and (max-width: ${breakP.pc}px) and (min-width: ${breakP.tablet+1}px){
+        width: 340px;
+    }
+
+    @media only screen and (max-width: ${breakP.tablet}px){
+        width: 300px;
+        margin: 0 auto;
     }
 `

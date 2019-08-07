@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import {breakP} from '../../styles/page'
 
 export default class DesenhoTituloDecriacao extends Component {
 
@@ -37,5 +38,14 @@ const Produto = styled.div`
     p{
         font-size: 0.875em;
         line-height: 1.4em;
+    }
+
+    @media only screen and (max-width: ${breakP.pc}px) and (min-width: ${breakP.tablet+1}px){
+        width: 220px;
+    }
+
+    @media only screen and (max-width: ${breakP.tablet}px){
+        width: 300px;
+        margin: 0 auto 20px auto;
     }
 `

@@ -1,5 +1,12 @@
 import styled from 'styled-components'
 
+export const breakP = {
+    mobile: 319,
+    tablet: 739,
+    pc: 959
+    
+}
+
 export const Container = styled.div`
     max-width: 960px;
     margin: 0 auto;
@@ -8,6 +15,12 @@ export const Container = styled.div`
         content: '';
         display: table;
         clear: both;
+    }
+    @media only screen and (max-width: ${breakP.pc}px) and (min-width: ${breakP.tablet+1}px){
+        max-width: ${breakP.tablet-19}px;
+    }
+    @media only screen and (max-width: ${breakP.tablet}px){
+        max-width: ${breakP.mobile-19}px;
     }
 `
 export const Botao = styled.a`

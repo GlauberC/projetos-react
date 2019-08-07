@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from '../styles/page';
+import { Container, breakP } from '../styles/page';
 import styled from 'styled-components'
 
 export default () => (
@@ -25,5 +25,16 @@ const Footer = styled.footer`
         float: right;
         margin: 0 10px;
         display: block;
+    }
+
+    @media only screen and (max-width: ${breakP.tablet}px){
+        p{
+            float: none;
+            margin: 0px;
+        }
+        img{
+            float: none;
+            margin: 20px auto;
+        }
     }
 `

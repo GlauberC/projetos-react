@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Container } from '../../styles/page';
+import { Container, breakP } from '../../styles/page';
 
 export default props => (
     <LocalBlock>
@@ -58,6 +58,24 @@ const LocalBlock = styled.div`
         clear: both;
         content: '';
         display: table;
+    }
+
+    @media only screen and (max-width: ${breakP.pc}px) and (min-width: ${breakP.tablet+1}px){
+        
+        width: 340px;
+
+        img,div{
+            width: 340px;
+        }
+    }
+
+    @media only screen and (max-width: ${breakP.tablet}px){
+        width: 300px;
+        margin: 0px;
+        img, div{
+            max-width: 300px;
+            margin: 0px;
+        }
     }
 
 

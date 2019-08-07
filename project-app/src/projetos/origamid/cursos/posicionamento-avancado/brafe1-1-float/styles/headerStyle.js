@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {Container} from './page'
+import {Container, breakP} from './page'
 
 export const HeaderContainer = styled.header`
     background-color: #252525;
@@ -30,5 +30,23 @@ export const MenuContainer = styled(Container)`
             }
         }
     }
+
+
+    @media only screen and (max-width: ${breakP.tablet}px){
+        text-align: center;
+        max-width: 360px;
+        nav{
+            float: none;
+            clear: both;
+            /* Não foi ajustado os botoes do menu */
+        }
+        &>a{
+            float: none;
+            margin: 0px auto 20px auto;
+        }
+
+    }
+
+
 `  
 

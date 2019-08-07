@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from '../../styles/page';
+import { Container, breakP } from '../../styles/page';
 import styled from 'styled-components'
 
 export default props => (
@@ -56,10 +56,20 @@ const AssineContainer = styled(Container)`
             width: 140px;
             padding: 13px 0;
             color: #fff;
-            cursor: pointer;
-
-
-            
+            cursor: pointer;            
         }
+    }
+
+
+    @media only screen and (max-width: ${breakP.pc}px) and (min-width: ${breakP.tablet+1}px){
+        div, form, input{
+            width: 340px;
+        }        
+    }
+
+    @media only screen and (max-width: ${breakP.tablet}px){
+        div, form, input{
+            width: 340px;
+        }   margin: 10px 0 0 0;
     }
 `
