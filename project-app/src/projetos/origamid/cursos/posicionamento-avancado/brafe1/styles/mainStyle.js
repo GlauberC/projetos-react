@@ -63,3 +63,15 @@ export const Produtos = styled.section`
         }
     }
 `
+
+export const Locais = styled.section`
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 0;
+`
+
+export const Assine = styled.section`
+    background: #e7e4d8;
+    padding: 30px 0;
+
+`
