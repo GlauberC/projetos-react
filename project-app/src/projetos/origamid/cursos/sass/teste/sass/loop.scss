@@ -1,0 +1,35 @@
+@for $i from 1 through 6 {
+    .item-#{$i}{
+        width: 100px*$i;
+    }
+}
+
+$total: 960;
+$gutter: 20;
+$colunas: 12;
+
+@for $i from 1 through 12 {
+
+    $width: $total / $colunas * $i - $gutter;
+
+    .grid-#{$i}{
+        width: $width + px;
+    }
+}
+
+@for $i from 1 through 12 {
+
+    $width: $i / $colunas * 100%;
+
+    .gridpercent-#{$i}{
+        width: $width 
+    }
+}
+
+// $lista: facebook twitter snapchat instagram;
+
+// @each $item in $lista{
+//     .rede-#{$item}{
+//         background: url(require('url/#{$item}.png'))
+//     }
+// }

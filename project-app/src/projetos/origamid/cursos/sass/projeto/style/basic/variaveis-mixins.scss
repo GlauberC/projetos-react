@@ -1,0 +1,34 @@
+// Cores
+$type-1: #edece4;   //bege-claro
+$type-2: #cbc9b9;   //bege-medio
+$type-3: #988c77;   //bege-escuro
+$type-4: #2a2426;   //cinza
+$type-5: #1ab912;   //verde
+
+// Fontes
+$font-1: 'Courier New', Courier, monospace;
+$font-2: serif;
+
+@function em($pixel, $context: 16){
+    @return $pixel / $context + em;
+}
+
+@mixin tipo-1 ($size){
+    font-family: $font-1;
+    @if $size == 18{
+        font-size: em(18);
+        line-height: em(30, 18);
+    }
+}
+
+@mixin tipo-2 ($size){
+    font-family: $font-2;
+    @if $size == 18{
+        font-size: em(18);
+        line-height: em(30, 18);
+    }
+    @else if $size == 24{
+        font-size: em(24);
+        line-height: em(30, 24);
+    }
+}

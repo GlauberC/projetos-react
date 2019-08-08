@@ -1,0 +1,19 @@
+$tema: normal;
+
+$type1: rgb(26, 151, 21);
+$type2: #fff;
+$type3: black;
+
+@if $tema == oceano{
+    $type1: blue;
+    $type2: orange;
+    $type3: #fff;
+} @else if $tema == dark{
+    $type1: rgb(4, 4, 70);
+    $type2: rgb(0, 0, 0);
+    $type3: rgb(146, 146, 146);
+} @else if $tema == normal{
+    $type1: rgb(26, 151, 21);
+    $type2: #fff;
+    $type3: black;
+}

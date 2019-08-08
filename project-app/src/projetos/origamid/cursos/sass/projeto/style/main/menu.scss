@@ -1,0 +1,68 @@
+@import '../basic/geral.scss';
+
+.menu{
+    margin-top: 120px;
+    margin-bottom: 120px;
+    @include device(m){
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    @include device(s){
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.menu-item{
+    margin-bottom: 60px;
+    h2{
+        @include tipo-2(24);
+        margin-bottom: 1em;
+
+        @include device(s){
+            margin-top: 10px;
+            margin-bottom: 0.6em;
+            text-align: center;
+        }
+    }
+    li{
+        @include tipo-1(18);
+        line-height: em(35, 18);
+
+        span {
+            font-family: $font-2;
+            color: $type-3;
+            display: inline-block;
+            margin-right: 10px;
+            width: 70px;
+            text-align: right;
+            margin-left: -80px;
+
+            @include device(s){
+                margin-left: -20px;
+            }
+
+        }
+    }
+    img{
+        border-radius: 50%;
+        border: 10px solid $type-2;
+        position: absolute;
+        right: 0px;
+        margin-top: 40px;
+        @include device(l){
+            right: 120px;
+        }
+        
+
+        @include device(s){
+            margin: 0 auto;
+            position: relative;
+        }
+    }
+
+
+    @include device(s){
+        margin-bottom: 40px;
+    }
+}

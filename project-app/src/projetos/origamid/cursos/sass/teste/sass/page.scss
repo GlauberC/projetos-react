@@ -1,0 +1,51 @@
+@import  './temas.scss';
+@import './mixin.scss';
+@import './function.scss';
+@import './loop.scss';
+
+body{
+    background-color: $type2;
+    
+
+}
+
+.container{
+    background-color: $type1;
+
+    h1{
+        color: $type2;
+        font-size: em(30);
+
+        &:hover{
+            background-color: invert(blue);
+
+        }
+
+        @include separador($type2);
+        
+    }
+    @include multiplas-sombras(10px 10px 10px $type1, 15px 15px 15px $type3);
+}
+
+.intro{
+    margin: (30 + 30 + 30px) auto;
+    a{
+        @include button($type3);
+    }
+}
+
+.responsividade{
+    color: $type1;
+
+    @include mobile{
+        color: red;
+    }
+    @include tablet{
+        color: blue;
+    }
+}
+
+.teste-grid{
+    background-color: red;
+    height: 40px;
+}
