@@ -6,15 +6,15 @@ export default () => (
         <div className = "grid-7 offset-1">
             <form>
                 <label>Nome</label>
-                <input type = "text"/>
+                <input class = "text" type = "text"/>
                 <div className = "row">
                     <div className = "grid-7">
                         <label>E-mail</label>
-                        <input type = "text"/>
+                        <input class = "text" type = "text"/>
                     </div>
                     <div className = "grid-5">
                         <label>Telefone</label>
-                        <input type = "text"/>
+                        <input class = "text" type = "text"/>
                     </div>
                 </div>
                 <label>Mensagem</label>

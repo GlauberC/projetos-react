@@ -1,0 +1,90 @@
+.titulo{
+    @include device(s){
+        &::after{
+            width: 70%;
+        }
+    }
+}
+
+.contato{
+    margin-top: 120px;
+    margin-bottom: 120px;
+    @include device(m){
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    @include device(s){
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    form{
+        @include tipo-1(18);
+        display: block;
+    }
+    input.text, textarea{
+        @include tipo-1(18);
+        color: $type-4;
+        width: 100%;
+        padding: 0 5px;
+        height: 40px;
+        border: 2px solid $type-3;
+        background-color: transparent;
+        margin-bottom: 1em;
+        &:hover, &:focus{
+            outline: none;
+            border: 2px solid $type-2;
+        }
+    }
+    textarea{
+        height: 120px;
+    }
+}
+
+input.button{
+    @include tipo-1(18);
+    cursor: pointer;
+    color: $type-3;
+    text-transform: uppercase;
+    width: 200px;
+    height: 50px;
+    padding-top: 5px;
+    background: transparent;
+    border: 2px solid $type-3;
+    display: block;
+    box-shadow: 5px 5px 0 -2px $type-2, 5px 5px 0 0px $type-3; 
+    &:hover &:focus{
+        box-shadow: 2px 2px 0 -2px $type-2, 2px 2px 0 0px $type-3; 
+    }
+}
+
+.contato-info {
+    display: inline-block;
+    color: $type-3;
+    @include device(l){
+        float: right;
+        text-align: right;
+        margin-top: -3em;
+        margin-bottom: 3em;
+    }
+    @include device(m){
+        display: block;
+        margin: 20px auto;
+        text-align: right;
+    }
+    @include device(s){
+        display: block;
+        margin: 20px auto;
+        text-align: right;
+    }
+}
+
+.contato-mapa{
+    display: block;
+    box-shadow: 0 0 0 10px $type-2;
+    clear: both;
+    img{
+        width: 100%;
+    }
+    margin-bottom: 20px;
+}

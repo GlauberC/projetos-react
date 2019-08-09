@@ -1,0 +1,33 @@
+footer{
+    background-color: $type-4;
+    padding: 20px 0;
+    font-size: tipo-2(18);
+    box-shadow: 0 0 0 10px $type-4;
+    p{
+        color: $type-1;
+        display: inline-block;
+        @include device(s){
+            text-align: center;
+        }
+    }
+    a{
+        float: right;
+    }
+
+    @include device(m){
+        .container{
+            padding: 0 20px;
+        }
+    }
+
+
+    @include device(s){
+        a {
+            float: none;
+            img{
+                margin: 10px auto;
+            }
+        }
+        
+    }
+}
